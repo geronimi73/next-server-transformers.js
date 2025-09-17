@@ -5,12 +5,12 @@ const nextConfig = {
   outputFileTracingExcludes: {
       '/': [
         'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/*',
-        // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/win32',
+        // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/linux/x64/onnxruntime_binding.node',
       ],
   },
   outputFileTracingIncludes: {
       '/': [
-        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/linux',
+        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/x64/*',
       ],
   },
 
