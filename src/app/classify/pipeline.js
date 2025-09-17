@@ -1,7 +1,6 @@
 import { pipeline, env } from "@huggingface/transformers";
 
 env.cacheDir = "/tmp/.cache"
-// env.cacheDir = './.cache';
 
 // Use the Singleton pattern to enable lazy construction of the pipeline.
 // NOTE: We wrap the class in a function to prevent code duplication (see below).
