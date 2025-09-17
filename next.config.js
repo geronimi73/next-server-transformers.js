@@ -4,6 +4,7 @@ const nextConfig = {
   // and https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats
   outputFileTracingExcludes: {
       '/': [
+        'node_modules/@huggingface/transformers/**/*.so',
         'node_modules/@huggingface/transformers/.cache',
         'node_modules/@huggingface/transformers/.cache/*',
         'node_modules/@huggingface/transformers/.cache/**/*',
