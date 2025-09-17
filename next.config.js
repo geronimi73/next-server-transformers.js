@@ -7,7 +7,7 @@ const nextConfig = {
   // and https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats
   outputFileTracingExcludes: {
       '/': [
-        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node',
+        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/x64/libonnxruntime.so.1.20.1',
       ],
   },
   outputFileTracingIncludes: {
@@ -18,20 +18,18 @@ const nextConfig = {
 
   // Indicate that these packages should not be bundled by webpack
   // serverExternalPackages: [
-    // "onnxruntime-node",
-    // "@huggingface/transformers",
-    // "sharp",
+  //   "onnxruntime-node",
+  //   "@huggingface/transformers",
+  //   // "sharp",
   // ],
-  webpack: (config) => {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        "onnxruntime-node": path.join(__dirname, 'node_modules/onnxruntime-node'),
-      }
+  // webpack: (config) => {
+  //     config.resolve.alias = {
+  //       ...config.resolve.alias,
+  //       "onnxruntime-node": path.join(__dirname, 'node_modules/onnxruntime-node/dist/bindkjhings.js'),
+  //     }
 
-      return config;
-  },
-
-
+  //     return config;
+  // },
 };
 
 module.exports = nextConfig;
