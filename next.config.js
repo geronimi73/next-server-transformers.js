@@ -22,10 +22,11 @@ const nextConfig = {
         // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/linux/x64/onnxruntime_binding.node',
       ],
   },
-  // outputFileTracingIncludes: {
-  //     '/': [
-  //     ],
-  // },
+  outputFileTracingIncludes: {
+      '/': [
+        'node_modules/@huggingface/transformers/**/libonnxruntime.so.1',
+      ],
+  },
 
   // Indicate that these packages should not be bundled by webpack
   // serverExternalPackages: [
