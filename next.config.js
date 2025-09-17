@@ -6,6 +6,7 @@ const nextConfig = {
       '*': [
         'node_modules/@huggingface/transformers/.cache/**/*',
         'node_modules/@huggingface/transformers/.cache/*',
+        '.next/.cache/*',
       ],
   },
 
