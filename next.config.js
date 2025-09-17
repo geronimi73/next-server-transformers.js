@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // (Optional) Export as a standalone site
-  // See https://nextjs.org/docs/pages/api-reference/next-config-js/output#automatically-copying-traced-files
-  //   output: "standalone", // Feel free to modify/remove this option
+  // see https://vercel.com/guides/troubleshooting-function-250mb-limit
+  // and https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats
+  outputFileTracingExcludes: {
+      '/': [
+          './node_modules/onnxruntime-node/*'
+      ],
+  },
 
   // Indicate that these packages should not be bundled by webpack
   serverExternalPackages: [
