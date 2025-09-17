@@ -1,4 +1,6 @@
-import { pipeline } from "@huggingface/transformers";
+import { pipeline, env } from "@huggingface/transformers";
+
+env.localModelPath = process.cwd() + "/models";
 
 // Use the Singleton pattern to enable lazy construction of the pipeline.
 // NOTE: We wrap the class in a function to prevent code duplication (see below).
