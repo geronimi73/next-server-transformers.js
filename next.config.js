@@ -6,7 +6,7 @@ const nextConfig = {
       '/': [
         'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/darwin/*',
         'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/win32/*',
-        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/linux/arm64/*',
+        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/arm64/*',
         // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/linux/x64/onnxruntime_binding.node',
       ],
   },
