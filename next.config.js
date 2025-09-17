@@ -11,7 +11,7 @@ const nextConfig = {
         // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/x64/libonnxruntime.so.1.20.1',
         // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/x64/libonnxruntime_providers_shared.so',
         // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/x64/libonnxruntime.so*',
-        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/x64/!(libonnxruntime*).so*',
+        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/x64/!(onnxruntime_binding.node)',
       ],
   },
   outputFileTracingIncludes: {
