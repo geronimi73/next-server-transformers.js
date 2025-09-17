@@ -14,6 +14,7 @@
     "eslint": "8.57.0",
     "eslint-config-next": "latest",
     "next": "latest",
+    "onnxruntime-node": "^1.22.0-rev",
     "postcss": "8.4.38",
     "react": "18.2.0",
     "react-dom": "18.2.0",
