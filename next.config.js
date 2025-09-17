@@ -9,11 +9,11 @@ const nextConfig = {
   // },
 
   // Indicate that these packages should not be bundled by webpack
-  // serverExternalPackages: [
-  //   "onnxruntime-node",
-  //   "@huggingface/transformers",
-  //   "sharp",
-  // ],
+  serverExternalPackages: [
+    // "onnxruntime-node",
+    "@huggingface/transformers",
+    // "sharp",
+  ],
 };
 
 module.exports = nextConfig;
