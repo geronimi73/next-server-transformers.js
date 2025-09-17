@@ -1,3 +1,6 @@
+const path = require('path');
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // see https://vercel.com/guides/troubleshooting-function-250mb-limit
@@ -22,8 +25,7 @@ const nextConfig = {
   webpack: (config) => {
       config.resolve.alias = {
         ...config.resolve.alias,
-        // "onnxruntime-node": path.join(__dirname, 'node_modules/@huggingface/transformers/node_modules/onnxruntime-web/dist/ort.all.bundle.min.mjs'),
-        "onnxruntime-node": false,
+        "onnxruntime-node": path.join(__dirname, 'node_modules/onnxruntime-node'),
       }
 
       return config;
