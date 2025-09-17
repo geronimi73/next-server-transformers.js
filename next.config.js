@@ -4,8 +4,13 @@ const nextConfig = {
   // and https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats
   outputFileTracingExcludes: {
       '/': [
-        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/darwin',
-        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/win32',
+        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/*',
+        // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/win32',
+      ],
+  },
+  outputFileTracingIncludes: {
+      '/': [
+        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/linux',
       ],
   },
 
