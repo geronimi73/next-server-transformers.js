@@ -4,10 +4,12 @@ const nextConfig = {
   // and https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats
   outputFileTracingExcludes: {
       '/': [
-        'node_modules/@huggingface/transformers/**/*.so',
+        // 'node_modules/@huggingface/transformers/**/*.so',
         'node_modules/@huggingface/transformers/.cache',
         'node_modules/@huggingface/transformers/.cache/*',
         'node_modules/@huggingface/transformers/.cache/**/*',
+        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/build',
+        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/build/*',
         'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/.cache/*',
         // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/dist/*',
         'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/lib/*',
@@ -24,7 +26,7 @@ const nextConfig = {
   },
   outputFileTracingIncludes: {
       '/': [
-        'node_modules/@huggingface/transformers/**/libonnxruntime.so.1',
+        // 'node_modules/@huggingface/transformers/**/libonnxruntime.so.1',
       ],
   },
 
