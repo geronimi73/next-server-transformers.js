@@ -20,7 +20,7 @@ const nextConfig = {
         // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/win32/**/*',
         // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/win32/**',
         // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/arm64/*',
-        'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/x64/*',
+        // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/bin/napi-v3/linux/x64/*',
         // 'node_modules/@huggingface/transformers/node_modules/onnxruntime-node/linux/x64/onnxruntime_binding.node',
       ],
   },
@@ -36,6 +36,17 @@ const nextConfig = {
     // "@huggingface/transformers",
     // "sharp",
   // ],
+  webpack: (config) => {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        // "onnxruntime-node": path.join(__dirname, 'node_modules/@huggingface/transformers/node_modules/onnxruntime-web/dist/ort.all.bundle.min.mjs'),
+        "onnxruntime-node": false,
+      }
+
+      return config;
+  },
+
+
 };
 
 module.exports = nextConfig;
